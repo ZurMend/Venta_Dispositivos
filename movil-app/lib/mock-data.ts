@@ -1,0 +1,252 @@
+import type { Product, User, Order } from "./types"
+
+export const mockProducts: Product[] = [
+  {
+    id: 1,
+    name: "iPhone 15 Pro Max",
+    description:
+      "Smartphone con chip A17 Pro, pantalla Super Retina XDR de 6.7 pulgadas, sistema de camara triple de 48MP y cuerpo de titanio.",
+    price: 1199.99,
+    category: "electronics",
+    image: "/images/iphone.jpg",
+    stock: 25,
+    brand: "Apple",
+  },
+  {
+    id: 2,
+    name: "Samsung Galaxy S24 Ultra",
+    description:
+      "Smartphone con procesador Snapdragon 8 Gen 3, pantalla Dynamic AMOLED 2X, S Pen integrado y camara de 200MP.",
+    price: 1299.99,
+    category: "electronics",
+    image: "/images/samsung.jpg",
+    stock: 18,
+    brand: "Samsung",
+  },
+  {
+    id: 3,
+    name: "Sony WH-1000XM5",
+    description:
+      "Audifonos inalambricos premium con cancelacion de ruido adaptativa, 30 horas de bateria y audio de alta resolucion.",
+    price: 349.99,
+    category: "electronics",
+    image: "/images/sony-headphones.jpg",
+    stock: 40,
+    brand: "Sony",
+  },
+  {
+    id: 4,
+    name: "iPad Pro M4",
+    description:
+      "Tablet con chip M4, pantalla Liquid Retina XDR de 12.9 pulgadas, compatible con Apple Pencil Pro.",
+    price: 1099.99,
+    category: "electronics",
+    image: "/images/ipad.jpg",
+    stock: 15,
+    brand: "Apple",
+  },
+  {
+    id: 5,
+    name: "AirPods Pro 2",
+    description:
+      "Audifonos inalambricos con cancelacion activa de ruido, audio espacial y estuche con carga USB-C.",
+    price: 249.99,
+    category: "electronics",
+    image: "/images/airpods.jpg",
+    stock: 60,
+    brand: "Apple",
+  },
+  {
+    id: 6,
+    name: "NVIDIA RTX 4090",
+    description:
+      "Tarjeta grafica con 24GB GDDR6X, arquitectura Ada Lovelace, ray tracing de tercera generacion y DLSS 3.",
+    price: 1599.99,
+    category: "pc",
+    image: "/images/rtx4090.jpg",
+    stock: 8,
+    brand: "NVIDIA",
+  },
+  {
+    id: 7,
+    name: "AMD Ryzen 9 7950X",
+    description:
+      "Procesador de 16 nucleos y 32 hilos, arquitectura Zen 4, 5.7GHz de frecuencia maxima y soporte DDR5.",
+    price: 549.99,
+    category: "pc",
+    image: "/images/ryzen9.jpg",
+    stock: 20,
+    brand: "AMD",
+  },
+  {
+    id: 8,
+    name: 'Monitor LG UltraGear 27" 4K',
+    description:
+      "Monitor gaming 4K UHD, 144Hz, 1ms de respuesta, HDR600, panel Nano IPS y compatibilidad G-Sync.",
+    price: 799.99,
+    category: "pc",
+    image: "/images/monitor-lg.jpg",
+    stock: 12,
+    brand: "LG",
+  },
+  {
+    id: 9,
+    name: "Corsair Vengeance DDR5 32GB",
+    description:
+      "Kit de memoria RAM DDR5-6000MHz CL36, perfil Intel XMP 3.0, disipador de calor de aluminio.",
+    price: 129.99,
+    category: "pc",
+    image: "/images/ram-corsair.jpg",
+    stock: 50,
+    brand: "Corsair",
+  },
+  {
+    id: 10,
+    name: "Samsung 990 Pro 2TB NVMe",
+    description:
+      "SSD NVMe M.2 con velocidades de lectura hasta 7,450MB/s, tecnologia V-NAND y controlador Samsung.",
+    price: 179.99,
+    category: "pc",
+    image: "/images/ssd-samsung.jpg",
+    stock: 35,
+    brand: "Samsung",
+  },
+  {
+    id: 11,
+    name: "Logitech MX Master 3S",
+    description:
+      "Mouse inalambrico ergonomico con sensor de 8000 DPI, scroll MagSpeed, USB-C y conexion multi-dispositivo.",
+    price: 99.99,
+    category: "pc",
+    image: "/images/mouse-logitech.jpg",
+    stock: 45,
+    brand: "Logitech",
+  },
+  {
+    id: 12,
+    name: "Teclado Mecanico Keychron Q1",
+    description:
+      "Teclado mecanico 75%, cuerpo de aluminio CNC, hot-swappable, compatible con Mac y Windows, retroiluminacion RGB.",
+    price: 169.99,
+    category: "pc",
+    image: "/images/keyboard-keychron.jpg",
+    stock: 22,
+    brand: "Keychron",
+  },
+]
+
+export const mockUsers: User[] = [
+  {
+    id: 1,
+    name: "Carlos Mendoza",
+    email: "carlos@example.com",
+    role: "client",
+    registeredAt: "2025-08-15",
+    phone: "+52 55 1234 5678",
+    address: "Av. Reforma 123, CDMX",
+  },
+  {
+    id: 2,
+    name: "Maria Garcia",
+    email: "maria@example.com",
+    role: "client",
+    registeredAt: "2025-09-02",
+    phone: "+52 33 9876 5432",
+    address: "Calle Juarez 456, Guadalajara",
+  },
+  {
+    id: 3,
+    name: "Admin TechStore",
+    email: "admin@techstore.com",
+    role: "admin",
+    registeredAt: "2025-01-01",
+    phone: "+52 81 5555 1234",
+    address: "Oficinas Centrales",
+  },
+  {
+    id: 4,
+    name: "Luis Rodriguez",
+    email: "luis@example.com",
+    role: "client",
+    registeredAt: "2025-10-10",
+    phone: "+52 22 4567 8901",
+    address: "Blvd. Norte 789, Monterrey",
+  },
+  {
+    id: 5,
+    name: "Ana Lopez",
+    email: "ana@example.com",
+    role: "client",
+    registeredAt: "2025-11-20",
+    phone: "+52 44 3210 9876",
+    address: "Calle Sur 321, Puebla",
+  },
+]
+
+export const mockOrders: Order[] = [
+  {
+    id: 1001,
+    userId: 1,
+    userName: "Carlos Mendoza",
+    userEmail: "carlos@example.com",
+    items: [
+      { productId: 1, productName: "iPhone 15 Pro Max", quantity: 1, price: 1199.99 },
+      { productId: 5, productName: "AirPods Pro 2", quantity: 1, price: 249.99 },
+    ],
+    total: 1449.98,
+    status: "delivered",
+    createdAt: "2025-12-01",
+  },
+  {
+    id: 1002,
+    userId: 2,
+    userName: "Maria Garcia",
+    userEmail: "maria@example.com",
+    items: [
+      { productId: 6, productName: "NVIDIA RTX 4090", quantity: 1, price: 1599.99 },
+      { productId: 7, productName: "AMD Ryzen 9 7950X", quantity: 1, price: 549.99 },
+      { productId: 9, productName: "Corsair Vengeance DDR5 32GB", quantity: 2, price: 129.99 },
+    ],
+    total: 2409.96,
+    status: "shipped",
+    createdAt: "2025-12-15",
+  },
+  {
+    id: 1003,
+    userId: 4,
+    userName: "Luis Rodriguez",
+    userEmail: "luis@example.com",
+    items: [
+      { productId: 8, productName: 'Monitor LG UltraGear 27" 4K', quantity: 2, price: 799.99 },
+      { productId: 11, productName: "Logitech MX Master 3S", quantity: 1, price: 99.99 },
+    ],
+    total: 1699.97,
+    status: "confirmed",
+    createdAt: "2026-01-05",
+  },
+  {
+    id: 1004,
+    userId: 1,
+    userName: "Carlos Mendoza",
+    userEmail: "carlos@example.com",
+    items: [
+      { productId: 3, productName: "Sony WH-1000XM5", quantity: 1, price: 349.99 },
+    ],
+    total: 349.99,
+    status: "pending",
+    createdAt: "2026-01-28",
+  },
+  {
+    id: 1005,
+    userId: 5,
+    userName: "Ana Lopez",
+    userEmail: "ana@example.com",
+    items: [
+      { productId: 2, productName: "Samsung Galaxy S24 Ultra", quantity: 1, price: 1299.99 },
+      { productId: 12, productName: "Teclado Mecanico Keychron Q1", quantity: 1, price: 169.99 },
+    ],
+    total: 1469.98,
+    status: "delivered",
+    createdAt: "2026-02-01",
+  },
+]
