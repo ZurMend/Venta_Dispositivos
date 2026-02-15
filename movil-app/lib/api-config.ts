@@ -9,7 +9,7 @@ export const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080/api"
 
 // Cambia esto a false cuando tu API de Spring Boot este lista
-export const USE_MOCK_DATA = true
+export const USE_MOCK_DATA = false
 
 export const API_ENDPOINTS = {
   // Auth
@@ -22,16 +22,14 @@ export const API_ENDPOINTS = {
     `/products/category/${category}`,
   PRODUCT_BY_ID: (id: number) => `/products/${id}`,
 
-  // Orders
   ORDERS: "/orders",
   ORDER_BY_ID: (id: number) => `/orders/${id}`,
   ORDERS_BY_USER: (userId: number) => `/orders/user/${userId}`,
 
-  // Users (admin)
+
   USERS: "/users",
   USER_BY_ID: (id: number) => `/users/${id}`,
 
-  // Cart
   CART: "/cart",
   CART_ADD: "/cart/add",
   CART_REMOVE: (productId: number) => `/cart/remove/${productId}`,
