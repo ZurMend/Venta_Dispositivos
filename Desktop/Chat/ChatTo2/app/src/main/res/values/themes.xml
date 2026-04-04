@@ -1,0 +1,10 @@
+<resources>
+    <style name="Theme.ChatTo" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#6366f1</item>
+        <item name="colorPrimaryVariant">#4f46e5</item>
+        <item name="colorOnPrimary">#ffffff</item>
+        <item name="android:windowBackground">#07090f</item>
+        <item name="android:statusBarColor">#0d1021</item>
+        <item name="android:navigationBarColor">#0d1021</item>
+    </style>
+</resources>

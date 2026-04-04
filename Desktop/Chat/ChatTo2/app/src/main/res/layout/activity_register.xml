@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#07090f"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp"
+        android:gravity="center_horizontal">
+
+        <!-- Logo -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="28dp">
+
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="💬"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:background="@drawable/logo_bg"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ChatTo"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#f1f5f9"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear cuenta"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#f1f5f9"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Únete a ChatTo y empieza a chatear"
+            android:textSize="14sp"
+            android:textColor="#64748b"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- Error -->
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#fca5a5"
+            android:textSize="13sp"
+            android:padding="12dp"
+            android:background="@drawable/error_bg"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre completo"
+            android:textSize="13sp"
+            android:textColor="#64748b"
+            android:layout_marginBottom="7dp"/>
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tu nombre"
+            android:inputType="textPersonName"
+            android:background="@drawable/input_bg"
+            android:padding="14dp"
+            android:textColor="#f1f5f9"
+            android:textColorHint="#475569"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correo electrónico"
+            android:textSize="13sp"
+            android:textColor="#64748b"
+            android:layout_marginBottom="7dp"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="tu@correo.com"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/input_bg"
+            android:padding="14dp"
+            android:textColor="#f1f5f9"
+            android:textColorHint="#475569"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contraseña"
+            android:textSize="13sp"
+            android:textColor="#64748b"
+            android:layout_marginBottom="7dp"/>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mínimo 6 caracteres"
+            android:inputType="textPassword"
+            android:background="@drawable/input_bg"
+            android:padding="14dp"
+            android:textColor="#f1f5f9"
+            android:textColorHint="#475569"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crear cuenta"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_primary"
+            android:padding="16dp"
+            android:stateListAnimator="@null"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Ya tienes cuenta? Iniciar sesión"
+            android:textSize="13sp"
+            android:textColor="#6366f1"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="40dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+</ScrollView>

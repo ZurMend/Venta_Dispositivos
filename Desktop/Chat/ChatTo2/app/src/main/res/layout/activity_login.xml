@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#07090f"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp"
+        android:gravity="center_horizontal"
+        >
+
+        <!-- Logo -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="28dp">
+
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="💬"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:background="@drawable/logo_bg"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ChatTo"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#f1f5f9"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bienvenido de vuelta"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#f1f5f9"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inicia sesión para continuar"
+            android:textSize="14sp"
+            android:textColor="#64748b"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- Tabs -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/tabs_bg"
+            android:padding="4dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:id="@+id/tabPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🔑 Contraseña"
+                android:textSize="14sp"
+                android:textColor="@color/accent"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/tab_active"/>
+
+            <TextView
+                android:id="@+id/tabFinger"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="👆 Huella"
+                android:textSize="14sp"
+                android:textColor="#64748b"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
+        </LinearLayout>
+
+        <!-- Error -->
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#fca5a5"
+            android:textSize="13sp"
+            android:padding="12dp"
+            android:background="@drawable/error_bg"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"/>
+
+        <!-- Panel contraseña -->
+        <LinearLayout
+            android:id="@+id/panelPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correo electrónico"
+                android:textSize="13sp"
+                android:textColor="#64748b"
+                android:layout_marginBottom="7dp"/>
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="tu@correo.com"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/input_bg"
+                android:padding="14dp"
+                android:textColor="#f1f5f9"
+                android:textColorHint="#475569"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contraseña"
+                android:textSize="13sp"
+                android:textColor="#64748b"
+                android:layout_marginBottom="7dp"/>
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tu contraseña"
+                android:inputType="textPassword"
+                android:background="@drawable/input_bg"
+                android:padding="14dp"
+                android:textColor="#f1f5f9"
+                android:textColorHint="#475569"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Iniciar sesión"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_primary"
+                android:padding="16dp"
+                android:stateListAnimator="@null"/>
+
+        </LinearLayout>
+
+        <!-- Panel huella -->
+        <LinearLayout
+            android:id="@+id/panelFinger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <FrameLayout
+                android:id="@+id/btnFinger"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/finger_btn_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="👆"
+                    android:textSize="56sp"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toca para escanear tu huella dactilar"
+                android:textSize="14sp"
+                android:textColor="#64748b"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿No tienes cuenta? Regístrate aquí"
+            android:textSize="13sp"
+            android:textColor="#6366f1"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="40dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+</ScrollView>
